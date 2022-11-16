@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<h2>Index</h2>
+
+@*normal htmlcode*@
+<input type="text" name="fullname" id="fulname" value="" />
+
+<br />
+<br />
+
+@*html helpper method to create textbox*@
+@Html.TextBox("fullname")
+<br />
+<br />
+
+@*html helpper method to create textbox with value *@
+@Html.TextBox("fullname", "surya")
+<br />
+<br />
+@*html helpper method to create textbox with tooltip*@
+@*this is also known as overloaded version of html*@
+@Html.TextBox("fullname", "vinu", new
+{
+   title = "Enter your name"
+})
+<br />
+<br />
+
+@*html helpper method to create textbox with style*@
+@Html.TextBox("fullname", "vinu", new
+{
+    style = "background:red; color:yellow"
+})
+
+<br />
+<br />
+
+@*html helpper method to add external style sheet*@
+@Html.TextBox("fullname", "Vinum", new
+{ @class = "textstyle" })
+
+
+<br />
+<br />
+
+@*html helpper method to add bootstrap*@
+@Html.TextBox("fullname", "Vinum", new
+{ @class = "form-control", @readonly = true })

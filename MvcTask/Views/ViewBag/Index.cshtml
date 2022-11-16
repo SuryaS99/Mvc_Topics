@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>@ViewBag.Message</p>
+
+<p><b>@ViewBag.Date</b></p>
+
+@*<ul>
+        @{
+            foreach (string item in (string[])ViewBag.FruitsArray)
+                {
+                    <li>@item</li>
+            }
+
+        }
+    </ul>*@
+
+
+<ul>
+    @{
+        foreach (string item in ViewBag.FruitsArray)
+        {
+            <li>@item</li>
+        }
+
+    }
+</ul>
+
+@*<ul>
+        @{
+            foreach (string item in (List<string>)ViewBag.sportsList)
+            {
+                <li>@item</li>
+            }
+        }
+    </ul>*@
+
+<ul>
+    @{
+        foreach (string item in ViewBag.sportsList)
+        {
+            <li>@item</li>
+        }
+    }
+</ul>
+
+@{
+    var a = ViewBag.Info;
+}
+
+<p><i>@a.EmpID</i></p>
+<p><i>@a.EmpName</i></p>
+<p><i>@a.EmpDesig</i></p>
+
+<p style="color:red">Message access by View Data:</p>
+<h1> @ViewData["CommonMessage"]</h1>
+<p style="color:red">Message access by View Bag:</p>
+<h1> @ViewBag.CommonMessage</h1>
+

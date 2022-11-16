@@ -1,0 +1,19 @@
+﻿@model Strongly_Typed_Html_Helpers.Models.SignUp
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+@using (Html.BeginForm())
+
+{
+    @Html.HiddenFor(model => model.UserId)
+    //created model variable and bind  model property
+    <p>@Html.LabelFor(model => model.UserName) &nbsp; @Html.TextBoxFor(model => model.UserName, new { @class = "form-control" })</p>
+    <p>@Html.LabelFor(model => model.UserPassword) &nbsp; @Html.PasswordFor(model => model.UserPassword, new { @class = "form-control" })</p>
+    <p>@Html.LabelFor(model => model.UserGender) &nbsp; @Html.DropDownListFor(model => model.UserGender, new SelectList(new[] { "Male", "Female" }), "Select", new { @class = "form-control" })</p>
+    <p>@Html.LabelFor(model => model.UserEmail) &nbsp; @Html.TextBoxFor(model => model.UserEmail, new { @class = "form-control" })</p>
+    <p>@Html.LabelFor(model => model.UserComment) &nbsp; @Html.TextAreaFor(model => model.UserComment, new { @class = "form-control" })</p>
+
+    <input type="submit" value="Submit" class="form-control" />
+}

@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "AboutUs";
+}
+
+<h2>AboutUs</h2>
+<h3>This is About Us Page</h3>
+
+<nav>
+    <ul>
+        @*@Html.ActionLink("name diplay on webpage","action name ","controller name")*@
+        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+        <li>@Html.ActionLink("About", "AboutUs", "Home")</li>
+        <li>@Html.ActionLink("Contact", "ContactUs", "Home")</li>
+
+    </ul>
+</nav>

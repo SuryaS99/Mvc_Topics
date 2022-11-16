@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "EmpInfo";
+}
+
+<h2>EmpInfo</h2>
+
+@Html.Partial("_EmployeeList")
+
+@{
+    Html.RenderPartial("_EmployeeList");
+}
+
+@Html.Partial("_LoginPartialView")
+<br />
+@{
+    Html.RenderPartial("_LoginPartialView");
+}

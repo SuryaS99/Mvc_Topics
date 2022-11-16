@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<h2>Index</h2>
+
+@{
+    Html.BeginForm("Index", "Home");
+}
+
+@*@Html.Label("Username") &nbsp;
+    @Html.TextBox("Username")*@
+<br />
+@Html.Label("Username") &nbsp;
+@Html.TextBox("Username", "", new { @class = "form-control" })
+<br />
+@*<br />
+    @Html.Label("Password") &nbsp;
+    @Html.Password("Password")*@
+<br />
+@Html.Label("Password") &nbsp;
+@Html.Password("Password", "", new { @class = "form-control" })
+<br />
+<br />
+@Html.Label("Male") &nbsp; @Html.RadioButton("Gender", "Male")
+
+@*@Html.Label("Male") &nbsp; @Html.RadioButton("Gender", "Male", true)*@
+@Html.Label("Female") &nbsp; @Html.RadioButton("Gender", "Female")
+<br />
+<br />
+@Html.Label("Country") &nbsp; @Html.DropDownList("CountryList", new SelectList(new[] { "Pakistan", "America", "India", "Bangladesh", "Shrilanka" }), "Select", new { @class = "form-control" })
+<br />
+<br />
+@*rows=5 and column=20*@
+@Html.Label("Comments") &nbsp; @Html.TextArea("CommentsArea", "", 5, 20, new { @class = "form-control" })
+<br />
+<br />
+@*in lable if we use . then the label text will hide on the webpage*@
+@*@Html.CheckBox("AcceptTerms") &nbsp; @Html.Label("I Accept the terms.")*@
+<br />
+@Html.CheckBox("AcceptTerms", true) &nbsp; @Html.Label("I Accept the terms")
+<br />
+@Html.Hidden("id")
+<br />
+<br />
+<input type="submit" value="Submit" class="form-control" />
+
+
+@{
+    Html.EndForm();
+}

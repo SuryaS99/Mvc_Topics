@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+@*@section AddToHead{
+        <link href="~/Content/view.css" rel="stylesheet" type="text/css" />
+    }*@
+
+<h2>Index</h2>
+<p>
+<p style="color:blue"> Output from ViewData </p>
+@ViewData["Message1"]
+</>
+<p><p style="color:blue">Output from ViewBag</p>@ViewBag.Message2</>
+
+
+<p><p style="color:blue">Output from ViewData</p><b>@ViewData["CurrentDate1"]</b></>
+<p><p style="color:blue">Output from ViewBag</p><b>@ViewBag.CurrentDate2</b></>
+
+<ul>
+    <li><p style="color:blue">Output from ViewData</p></li>
+    @{
+        foreach (string item in (string[])ViewData["gameArray1"])
+        {
+            <li>@item</li>
+        }
+    }
+
+</ul>
+<ul>
+    <li><p style="color:blue">Output from ViewBag</p></li>
+
+    @{
+        foreach (string item in ViewBag.gameArray2)
+        {
+            <li>@item</li>
+        }
+    }
+
+</ul>
+
+
+@{
+    var a = ViewBag.studinfo2;
+    var b = (MvcTask.Models.Student)ViewData["stuinfo1"];
+}
+
+<p>@a.StuId</p>
+<p>@a.StuName</p>
+<p>@a.StuAge</p>
+
+<p>@b.StuId</p>
+<p>@b.StuName</p>
+<p>@b.StuAge</p>
+

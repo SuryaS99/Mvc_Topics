@@ -1,0 +1,53 @@
+﻿@*this is used to view single object*@
+@*@model StronglyTyped_View.Models.Employee*@
+@*namespace and model bind with view used in strongly typed view*@
+
+@*this is used to pass list of object*@
+@model List<StronglyTyped_View.Models.Employee>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@{
+    var a = (StronglyTyped_View.Models.Employee)ViewData["info"];
+    var b = ViewBag.info1;
+}
+
+
+<h1>ViewData Data </h1>
+<br />
+<p>@a.Id</p>
+<p>@a.Name</p>
+<p>@a.Age</p>
+
+<br />
+<br />
+
+<h1>ViewBag Data </h1>
+<br />
+<p>@b.Id</p>
+<p>@b.Name</p>
+<p>@b.Age</p>
+
+@*<h2>Strongly Typed View Single Object data</h2>
+    <h5>@Model.Id</h5>
+    <h5>@Model.Name</h5>
+    <h5>@Model.Age</h5>*@
+
+<h2>Strongly Typed View List of Object data</h2>
+<ul>
+    @{
+        foreach (var i in Model)
+        {
+            <li>@i.Id</li>
+            <li>@i.Name</li>
+            <li>@i.Age</li>
+        }
+    }
+
+</ul>
+
+
+

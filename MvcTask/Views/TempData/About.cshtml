@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "About";
+}
+
+<h2>About</h2>
+<h1>@TempData["int"]</h1>
+
+<p><b>ViewData =</b>@ViewData["var1"]</p>
+<p><b>ViewBag =</b>@ViewBag.var2</p>
+<p><b>TempData =</b> @TempData["Var3"]</p>
+<h3>@TempData["Var3"]</h3>
+
+
+<ul>
+    @{
+
+        foreach (string item in (string[])TempData["gamesArray"])
+        {
+            <li>@item</li>
+        }
+    }
+</ul>
+
+
