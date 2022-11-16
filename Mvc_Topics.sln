@@ -37,6 +37,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Url_Action", "Url_Action\Ur
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Validation_Message_Summary", "Validation_Message_Summary\Validation_Message_Summary.csproj", "{44281CF8-CFA1-4F10-A352-FD20C92B5310}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RouteAttributeCustom", "RouteAttributeCustom\RouteAttributeCustom.csproj", "{638D57AA-17F6-4DC3-A4D9-6FFB5D0400CB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +113,10 @@ Global
 		{44281CF8-CFA1-4F10-A352-FD20C92B5310}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{44281CF8-CFA1-4F10-A352-FD20C92B5310}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{44281CF8-CFA1-4F10-A352-FD20C92B5310}.Release|Any CPU.Build.0 = Release|Any CPU
+		{638D57AA-17F6-4DC3-A4D9-6FFB5D0400CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{638D57AA-17F6-4DC3-A4D9-6FFB5D0400CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{638D57AA-17F6-4DC3-A4D9-6FFB5D0400CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{638D57AA-17F6-4DC3-A4D9-6FFB5D0400CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
